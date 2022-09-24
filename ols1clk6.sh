@@ -604,20 +604,28 @@ function install_wordpress_core
         --allow-root \
         --quiet
     echoG "Install wordpress_$WPNUM activate plugins"  
-    wp plugin install duplicate-post \
-    loco-translate \
+    # wp plugin install duplicate-post \
+    # loco-translate \
+    # gtranslate \
     easy-theme-and-plugin-upgrades \
-    gtranslate \
         --allow-root \
         --activate \
         --quiet
     # prime plugins:
     echoG "Install wordpress_$WPNUM prime plugins"  
-    wp plugin install 'https://drive.google.com/uc?id=1y-uTJC5FT9kRa-BFbZuDRdD4AHBLaJLJ&export=download&confirm=1' --allow-root --activate --quiet
-    wp plugin install 'https://drive.google.com/uc?id=1NG0cuvqyXOjsnObJHgic_DhdilxXcWIl&export=download&confirm=1' --allow-root --activate --quiet
-    wp plugin install 'https://drive.google.com/uc?id=1tr23MruSn7SojQCIR1j0Q410L9QFkwTb&export=download&confirm=1' --allow-root --activate --quiet
-    wp plugin install 'https://drive.google.com/uc?id=13fPuXHRBWbb66Vce6x3Za5xYZ2lS01mk&export=download&confirm=1' --allow-root --quiet
+    # wp plugin install 'https://drive.google.com/uc?id=1y-uTJC5FT9kRa-BFbZuDRdD4AHBLaJLJ&export=download&confirm=1' --allow-root --activate --quiet
+    # wp plugin install 'https://drive.google.com/uc?id=1NG0cuvqyXOjsnObJHgic_DhdilxXcWIl&export=download&confirm=1' --allow-root --activate --quiet
+    # wp plugin install 'https://drive.google.com/uc?id=1tr23MruSn7SojQCIR1j0Q410L9QFkwTb&export=download&confirm=1' --allow-root --activate --quiet
+    # translatepress
+    wp plugin install translatepress-multilingual --allow-root --quiet
     wp plugin install 'https://drive.google.com/uc?id=1GKDRG8haB21p3wNAnSNnvynPLMEnp_kE&export=download&confirm=1' --allow-root --quiet
+    wp plugin install 'https://drive.google.com/uc?id=1poCVsCsip5dUgrtLab0lvcQ2CPMWXcPS&export=download&confirm=1' --allow-root --quiet
+    # multi plugin install
+    wp plugin install 'https://drive.google.com/uc?id=1vb3YeaFUZ1qtApRNvA-19yaYAhXmXidl&export=download&confirm=1' --allow-root --quiet
+    # static simply
+    wp plugin install 'https://drive.google.com/uc?id=1Tite0SzQ0wDZbd1SZZa1LwYIEHuN8d5y&export=download&confirm=1' --allow-root --quiet
+    wp plugin install 'https://drive.google.com/uc?id=19Xx5C0I5WsPdWSYx-cG1ewqpDrmSjjL8&export=download&confirm=1' --allow-root --quiet
+    # migration drive
     wp plugin install 'https://drive.google.com/uc?id=1tZGJXGkG7y6tXTIo_kVVgRAa2Tl3t5EO&export=download&confirm=1' --allow-root --quiet
     # theme
     echoG "Install wordpress_$WPNUM THEME"
