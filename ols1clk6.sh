@@ -604,9 +604,9 @@ function install_wordpress_core
         --allow-root \
         --quiet
     echoG "Install wordpress_$WPNUM activate plugins"  
-    wp plugin install duplicate-post \
     # loco-translate \
     # gtranslate \
+    wp plugin install duplicate-post \
     easy-theme-and-plugin-upgrades \
         --allow-root \
         --activate \
