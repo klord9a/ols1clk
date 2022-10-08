@@ -617,7 +617,8 @@ function install_wordpress_core
     # wp plugin install 'https://drive.google.com/uc?id=1NG0cuvqyXOjsnObJHgic_DhdilxXcWIl&export=download&confirm=1' --allow-root --activate --quiet
     # wp plugin install 'https://drive.google.com/uc?id=1tr23MruSn7SojQCIR1j0Q410L9QFkwTb&export=download&confirm=1' --allow-root --activate --quiet
     # translatepress
-    wp plugin install translatepress-multilingual --allow-root --quiet
+    # wp plugin install translatepress-multilingual --allow-root --quiet
+    wp plugin install 'https://drive.google.com/uc?id=13fPuXHRBWbb66Vce6x3Za5xYZ2lS01mk&export=download&confirm=1' --allow-root --quiet
     wp plugin install 'https://drive.google.com/uc?id=1GKDRG8haB21p3wNAnSNnvynPLMEnp_kE&export=download&confirm=1' --allow-root --quiet
     wp plugin install 'https://drive.google.com/uc?id=1poCVsCsip5dUgrtLab0lvcQ2CPMWXcPS&export=download&confirm=1' --allow-root --quiet
     # multi plugin install
