@@ -641,20 +641,21 @@ function install_wordpress_core
         --quiet
     echoG "Config multisites"
     wp core multisite-convert --allow-root
-    echo "RewriteEngine On
-    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-    RewriteBase /
-    RewriteRule ^index\.php$ - [L]
+    echo '
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
 
-    # add a trailing slash to /wp-admin
-    RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
+# add a trailing slash to /wp-admin
+RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
 
-    RewriteCond %{REQUEST_FILENAME} -f [OR]
-    RewriteCond %{REQUEST_FILENAME} -d
-    RewriteRule ^ - [L]
-    RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) $2 [L]
-    RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ $2 [L]
-    RewriteRule . index.php [L]" >> .htaccess
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) $2 [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ $2 [L]
+RewriteRule . index.php [L]' >> .htaccess
     cp ~/php7.ini /usr/local/lsws/lsphp74/etc/php/7.4/litespeed/php.ini && /usr/local/lsws/bin/lswsctrl restart
 
     echoG 'End Setting Core Wordpress & THEME'
